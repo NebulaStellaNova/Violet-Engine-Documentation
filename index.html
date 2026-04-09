@@ -125,11 +125,9 @@
                     <h2>Prerequisites.</h2>
                     <span>Before you can do anything, you need to make the game recognize your mod!</span><br><br>
                     <span>To do this simply make a folder inside the mods folder and call it whatever you'd like<br>Then make a new text file and rename it to "novamod_meta.jsonc"<br>Inside the file paste the following:</span>
-                    <pre><code class="language-json" src="./test.jml" id="jsonPreview"></code><script>
-                        fetch('test.jml')
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById('jsonPreview').innerHTML = data;
+                    <pre><code class="language-json" id="novamod_metaPreview"></code><script>
+                        fetch('previews/novamod_menu.jml').then(response => response.text()).then(data => {
+                            document.getElementById('novamod_metaPreview').innerHTML = data;
                             hljs.highlightAll();
                         });
                     </script></pre>
@@ -137,8 +135,15 @@
                     <span>That's it!! Now the game will recognize your mod and load stuff from it.</span><br><br>
                     <span>Be sure to modify the contents of the json/jsonc file to fit your mod!</span>
 
-                    <h2>Prerequisites.</h2>
-
+                    <h2>Songs</h2>
+                    <span>Like V-Slice, adding songs requires a level file. Level files are formatted the same as V-Slice with the addition of "flashColor"</span><br><br>
+                    <span>If you're knew to this then go to "mods/YourModModFoler/data/levels/" and create a json file and inside paste the following:</span>
+                    <pre><code class="language-json" id="levelPreview"></code><script>
+                        fetch('previews/exampleLevel.jml').then(response => response.text()).then(data => {
+                            document.getElementById('levelPreview').innerHTML = data;
+                            hljs.highlightAll();
+                        });
+                    </script></pre>
                 </div>
             </div>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
