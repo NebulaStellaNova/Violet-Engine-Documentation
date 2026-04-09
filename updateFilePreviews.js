@@ -27,4 +27,5 @@ document.getElementById('levelPreview').innerHTML = `{
     &quot;songs&quot;: [&quot;test&quot;]
 }`;
 
+// -- Reload The Script Formatting -- \\
 hljs.highlightAll();
