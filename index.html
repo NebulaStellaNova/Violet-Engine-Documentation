@@ -104,7 +104,7 @@
                 <h2>Creating Your Mod</h2>
                 <div>
                     <a class="section">•</a><a class="section" href="#prereq">Prerequisites</a><br>
-                    <a class="section">•</a><a class="section" href="#install">Getting The Engine</a>
+                    <a class="section">•</a><a class="section" href="#songs">Adding A Song</a>
                 </div>
             </div>
             <div class="box, side">
@@ -113,7 +113,8 @@
                 <div id="about">
                     <h2>About The Engine.</h2>
                     <span>Violet Engine is a fnf engine coded from the ground up for the main purpose of improving the modding experience.</span><br><br>
-                    <span>The engine has FULL soft modding support made easy with our own Modding API.</span>
+                    <span>The engine has FULL soft modding support made easy with our own Modding API.</span><br><br><br>
+                    <span>All the editors' UIs in the engine is powered by our very own UI Library called LemonUI, which you can get here on <a href="https://github.com/NebulaStellaNova/LemonUI" target="_blank">GitHub</a>.</span>
                 </div><br>
                 <div id="install">
                     <h2>Getting The Engine.</h2>
@@ -125,25 +126,19 @@
                     <h2>Prerequisites.</h2>
                     <span>Before you can do anything, you need to make the game recognize your mod!</span><br><br>
                     <span>To do this simply make a folder inside the mods folder and call it whatever you'd like<br>Then make a new text file and rename it to "novamod_meta.jsonc"<br>Inside the file paste the following:</span>
-                    <pre><code class="language-json" id="novamod_metaPreview"></code><script>
-                        fetch('novamod_meta.jml').then(response => response.text()).then(data => {
-                            document.getElementById('novamod_metaPreview').innerHTML = data;
-                            hljs.highlightAll();
-                        });
-                    </script></pre>
+                    <pre><code class="language-json" id="novamod_metaPreview"></code></pre>
                     
                     <span>That's it!! Now the game will recognize your mod and load stuff from it.</span><br><br>
                     <span>Be sure to modify the contents of the json/jsonc file to fit your mod!</span>
-
-                    <h2>Songs</h2>
+                </div>
+                <div id="songs">
+                    <h2>Adding a Song</h2>
                     <span>Like V-Slice, adding songs requires a level file. Level files are formatted the same as V-Slice with the addition of "flashColor"</span><br><br>
-                    <span>If you're knew to this then go to "mods/YourModModFoler/data/levels/" and create a json file and inside paste the following:</span>
-                    <pre><code class="language-json" id="levelPreview"></code><script>
-                        fetch('exampleLevel.jml').then(response => response.text()).then(data => {
-                            document.getElementById('levelPreview').innerHTML = data;
-                            hljs.highlightAll();
-                        });
-                    </script></pre>
+                    <span>If you're new to this then go to "mods/YourModModFoler/data/levels/" and create a json file and inside paste the following:</span>
+                    <pre><code class="language-json" id="levelPreview"></code></pre>
+
+                    <s><span>You can add a song via the chart editor.</span></s>
+                    <span> -> The chart editor is very WiP so this will be written at a later date when it's done.</span>
                 </div>
             </div>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
@@ -151,6 +146,20 @@
 
             <!-- and it's easy to individually load additional languages -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+
+            <script>
+                // -- Update Mod Meta Preview -- \\
+                fetch('novamod_meta.jml').then(response => response.text()).then(data => {
+                    document.getElementById('novamod_metaPreview').innerHTML = data;
+                    hljs.highlightAll();
+                });
+                
+                // -- Level Example Preview -- \\
+                fetch('exampleLevel.jml').then(response => response.text()).then(data => {
+                    document.getElementById('levelPreview').innerHTML = data;
+                    hljs.highlightAll();
+                });
+            </script>
 
             <script>hljs.highlightAll();</script>
         </div>
