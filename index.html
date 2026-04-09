@@ -147,19 +147,7 @@
             <!-- and it's easy to individually load additional languages -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
 
-            <script>
-                // -- Update Mod Meta Preview -- \\
-                fetch('novamod_meta.jml').then(response => response.text()).then(data => {
-                    document.getElementById('novamod_metaPreview').innerHTML = data;
-                    hljs.highlightAll();
-                });
-                
-                // -- Level Example Preview -- \\
-                fetch('exampleLevel.jml').then(response => response.text()).then(data => {
-                    document.getElementById('levelPreview').innerHTML = data;
-                    hljs.highlightAll();
-                });
-            </script>
+            <script src="./updateFilePreviews.js"/>
 
             <script>hljs.highlightAll();</script>
         </div>
