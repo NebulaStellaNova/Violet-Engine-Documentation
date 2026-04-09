@@ -101,6 +101,11 @@
                     <a class="section">•</a><a class="section" href="#about">About The Engine</a><br>
                     <a class="section">•</a><a class="section" href="#install">Getting The Engine</a>
                 </div>
+                <h2>Creating Your Mod</h2>
+                <div>
+                    <a class="section">•</a><a class="section" href="#prereq">Prerequisites</a><br>
+                    <a class="section">•</a><a class="section" href="#install">Getting The Engine</a>
+                </div>
             </div>
             <div class="box, side">
                 <h1>Getting Started.</h1>
@@ -113,29 +118,26 @@
                 <div id="install">
                     <h2>Getting The Engine.</h2>
                     <span>You can get the engine on github from here <a href="https://github.com/NebulaStellaNova/Violet-Engine/actions" target="_blank">GitHub</a>.</span><br><br>
-                </div><br>
+                </div>
                 <h1>Creating Your Mod.</h1>
                 <hr>
                 <div id="prereq">
                     <h2>Prerequisites.</h2>
                     <span>Before you can do anything, you need to make the game recognize your mod!</span><br><br>
                     <span>To do this simply make a folder inside the mods folder and call it whatever you'd like<br>Then make a new text file and rename it to "novamod_meta.jsonc"<br>Inside the file paste the following:</span>
-                    <pre><code class="language-json">{
-    &quot;id&quot;: &quot;example&quot;,
-    &quot;title&quot;: &quot;Example Mod&quot;, // My engine supports .json and .jsonc, when it checks for json it also checks for jsonc
-    &quot;description&quot;: &quot;Example Mod Folder&quot;,
-    &quot;tags&quot;: [&quot;EXAMPLE&quot;], // QoL, WEEKS, SONGS, EXAMPLE, CHARACTERS, ENHANCEMENTS, PORT
-    &quot;contributors&quot;: [ // This is the credits that show in the mods menu, there is a seperate thing later for the credits menu
-        {
-            &quot;name&quot;: &quot;My Team Name&quot;,
-            &quot;role&quot;: &quot;What my team does&quot; // Optional
-        }
-    ],
-    &quot;mod_version&quot;: &quot;0.1.0&quot;, // Unlike V-Slice, this can be whatever you want
-    &quot;api_version&quot;: &quot;0.0.0&quot; // We need this property for backwards compatibility reasons.
-}</code></pre>
+                    <pre><code class="language-json" src="./test.jml" id="jsonPreview"></code><script>
+                        fetch('test.jml')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('jsonPreview').innerHTML = data;
+                        });
+                    </script></pre>
+                    
                     <span>That's it!! Now the game will recognize your mod and load stuff from it.</span><br><br>
                     <span>Be sure to modify the contents of the json/jsonc file to fit your mod!</span>
+
+                    <h2>Prerequisites.</h2>
+
                 </div>
             </div>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
