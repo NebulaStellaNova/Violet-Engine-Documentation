@@ -126,7 +126,7 @@
                     <span>Before you can do anything, you need to make the game recognize your mod!</span><br><br>
                     <span>To do this simply make a folder inside the mods folder and call it whatever you'd like<br>Then make a new text file and rename it to "novamod_meta.jsonc"<br>Inside the file paste the following:</span>
                     <pre><code class="language-json" id="novamod_metaPreview"></code><script>
-                        fetch('previews/novamod_menu.jml').then(response => response.text()).then(data => {
+                        fetch('novamod_menu.jml').then(response => response.text()).then(data => {
                             document.getElementById('novamod_metaPreview').innerHTML = data;
                             hljs.highlightAll();
                         });
@@ -139,7 +139,7 @@
                     <span>Like V-Slice, adding songs requires a level file. Level files are formatted the same as V-Slice with the addition of "flashColor"</span><br><br>
                     <span>If you're knew to this then go to "mods/YourModModFoler/data/levels/" and create a json file and inside paste the following:</span>
                     <pre><code class="language-json" id="levelPreview"></code><script>
-                        fetch('previews/exampleLevel.jml').then(response => response.text()).then(data => {
+                        fetch('exampleLevel.jml').then(response => response.text()).then(data => {
                             document.getElementById('levelPreview').innerHTML = data;
                             hljs.highlightAll();
                         });
