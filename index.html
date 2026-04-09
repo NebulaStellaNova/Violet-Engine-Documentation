@@ -130,6 +130,7 @@
                         .then(response => response.text())
                         .then(data => {
                             document.getElementById('jsonPreview').innerHTML = data;
+                            hljs.highlightAll();
                         });
                     </script></pre>
                     
